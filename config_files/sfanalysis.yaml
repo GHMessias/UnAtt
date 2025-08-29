@@ -1,0 +1,10 @@
+tasks:
+    sfanalysis: True
+    
+sfanalysis:
+    dataset_name: "Planetoid_Cora"
+    mimic_data: True
+    synthetic_gen: "SkyMap"
+    n: 0
+    m: 0
+    intra_cluster_edges: 0
