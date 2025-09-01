@@ -1,10 +1,26 @@
 tasks:
     sfanalysis: True
+    mimic: False
+    GraphGen: False
     
 sfanalysis:
-    dataset_name: "Planetoid_Cora"
+    dataset_name: "Planetoid:Cora"
     mimic_data: True
     synthetic_gen: "SkyMap"
     n: 0
     m: 0
     intra_cluster_edges: 0
+
+mimic:
+    dataset_name: "Planetoid:Cora"
+    synthetic_gen: "SkyMap"
+    n: 0
+    m: 0
+    intra_cluster_edges: 0
+
+GraphGen:
+    synthetic_gen: "SkyMap"
+    n: 200 # Testar o input de lista no UnAtt
+    m: 300
+    intra_cluster_edges: 400
+    k: 5
