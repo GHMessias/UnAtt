@@ -10,6 +10,7 @@ import yaml
 from torch_geometric import datasets
 from torch_geometric.datasets.graph_generator import BAGraph
 import torch
+import networkx as nx
 from torch_geometric.utils import from_networkx, to_networkx
 from graphgen_models.SkyMap.main import SkyMap
 from graphgen_models.GenCAT import func
@@ -20,6 +21,7 @@ from torch_geometric.utils import from_scipy_sparse_matrix
 from torch_geometric.data import Data
 from graphgen_models.UnAtt import unatt
 from graphgen_models.UnAtt import utils as unnat_utils
+import os
 
 
 def parse_arguments():
@@ -117,6 +119,13 @@ def get_data(config):
     Returns:
         torch_geometric.data.Data: Graph data file
     '''
+
+    # Verify if datasets folder exists
+
+    datasets_path = "./datasets/"
+
+    if not os.path.exists(datasets_path):
+        os.makedirs(datasets_path)
     
     dataset_class = config['sfanalysis']['dataset_name'].split("_")[0]
 
@@ -429,3 +438,52 @@ def dok_to_edge_index_pyg(A_dok, undirected=False, remove_self_loops=True, devic
         edge_index = edge_index.to(device)
         edge_weight = edge_weight.to(device)
     return edge_index, edge_weight
+
+def edge_index_to_gml(edge_index, path, directed=False):
+    # edge_index: Tensor shape [2, E]
+    ei = edge_index.detach().cpu().numpy()
+    G = nx.Graph() if not directed else nx.DiGraph()
+    G.add_edges_from(zip(ei[0], ei[1]))
+    # garante não-direcionado sem duplicatas
+    if directed is False:
+        G = nx.Graph(G)
+    # nx.write_gml(G, path)
+    nx.write_gml(G, path, stringizer=str)
+    return path
+
+def split_edge_index_by_label(edge_index: torch.Tensor, y: torch.Tensor):
+    """
+    Separa o edge_index em subgrafos por label da classe dos vértices.
+    
+    Parameters
+    ----------
+    edge_index : torch.Tensor
+        Tensor [2, E] com as arestas (no estilo PyG).
+    y : torch.Tensor
+        Tensor [N] com os rótulos de cada nó.
+    
+    Returns
+    -------
+    dict[int, torch.Tensor]
+        Dicionário {label: edge_index_label}, onde edge_index_label contém
+        apenas arestas conectando nós dessa classe.
+    """
+    # rótulo de cada nó para cada extremidade da aresta
+    src, dst = edge_index
+    label_src = y[src]
+    label_dst = y[dst]
+
+    # máscara: só pega arestas com ambos extremos da mesma classe
+    same_label_mask = label_src == label_dst
+
+    # arestas filtradas
+    filtered_edges = edge_index[:, same_label_mask]
+
+    # cria o dicionário
+    result = {}
+    for lbl in torch.unique(y):
+        mask_lbl = (label_src == lbl) & (label_dst == lbl)
+        edges_lbl = edge_index[:, mask_lbl]
+        result[int(lbl.item())] = edges_lbl
+
+    return result
