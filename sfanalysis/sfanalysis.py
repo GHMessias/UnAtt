@@ -1,10 +1,10 @@
 # import fit
 from __future__ import absolute_import
 from __future__ import print_function
-from sfanalysis_runner import fit
-from sfanalysis_runner import lrt
-from sfanalysis_runner import importfiles as im
-from sfanalysis_runner import sortgmls as sg
+from sfanalysis import fit
+from sfanalysis import lrt
+from sfanalysis import importfiles as im
+from sfanalysis import sortgmls as sg
 import numpy as np
 import pandas as pd
 import igraph

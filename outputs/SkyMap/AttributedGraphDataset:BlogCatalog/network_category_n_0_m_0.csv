@@ -1,0 +1,8 @@
+,Strongest,Strong,Weak,Weakest,Super_Weak,median_alpha,n,median_ntail
+datasets/SkyMap/AttributedGraphDataset:BlogCatalog_n_0_m_0/gmls/AttributedGraphDataset:BlogCatalog_0.gml,False,False,True,True,False,3.3500000000000023,4978,668.0
+datasets/SkyMap/AttributedGraphDataset:BlogCatalog_n_0_m_0/gmls/AttributedGraphDataset:BlogCatalog_1.gml,False,False,True,True,False,3.4700000000000024,4863,665.0
+datasets/SkyMap/AttributedGraphDataset:BlogCatalog_n_0_m_0/gmls/AttributedGraphDataset:BlogCatalog_2.gml,False,False,True,True,False,3.6300000000000026,4772,419.0
+datasets/SkyMap/AttributedGraphDataset:BlogCatalog_n_0_m_0/gmls/AttributedGraphDataset:BlogCatalog_3.gml,False,False,False,False,False,3.480000000000002,4576,762.0
+datasets/SkyMap/AttributedGraphDataset:BlogCatalog_n_0_m_0/gmls/AttributedGraphDataset:BlogCatalog_4.gml,False,False,True,True,False,3.6400000000000023,4332,343.0
+datasets/SkyMap/AttributedGraphDataset:BlogCatalog_n_0_m_0/gmls/AttributedGraphDataset:BlogCatalog_5.gml,False,False,True,True,False,3.480000000000002,4092,631.0
+datasets/SkyMap/AttributedGraphDataset:BlogCatalog_n_0_m_0/gmls/AttributedGraphDataset:BlogCatalog_complete.gml,False,False,True,True,False,4.550000000000003,31144,3099.0

@@ -4,22 +4,22 @@ tasks:
     GraphGen: False
     
 sfanalysis:
-    dataset_name: "Planetoid:Cora"
+    dataset_name: "AttributedGraphDataset:BlogCatalog"
     mimic_data: True
-    synthetic_gen: "SkyMap"
+    synthetic_gen: "UnAtt"
     n: 0
     m: 0
     intra_cluster_edges: 0
 
 mimic:
     dataset_name: "Planetoid:Cora"
-    synthetic_gen: "SkyMap"
+    synthetic_gen: "UnAtt"
     n: 0
     m: 0
     intra_cluster_edges: 0
 
 GraphGen:
-    synthetic_gen: "SkyMap"
+    synthetic_gen: "UnAtt"
     n: 200 # Testar o input de lista no UnAtt
     m: 300
     intra_cluster_edges: 400

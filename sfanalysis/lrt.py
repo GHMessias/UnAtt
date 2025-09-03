@@ -2,8 +2,8 @@ from __future__ import absolute_import
 import numpy as np
 import scipy.optimize as op
 import scipy.special as sp
-from sfanalysis_runner import integration_constants as ic
-from sfanalysis_runner import fit
+from sfanalysis import integration_constants as ic
+from sfanalysis import fit
 from scipy.stats import norm, chi2
 
 

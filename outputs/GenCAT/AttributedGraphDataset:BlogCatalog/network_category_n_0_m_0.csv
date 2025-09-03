@@ -1,0 +1,8 @@
+,Strongest,Strong,Weak,Weakest,Super_Weak,median_alpha,n,median_ntail
+datasets/GenCAT/AttributedGraphDataset:BlogCatalog_n_0_m_0/gmls/AttributedGraphDataset:BlogCatalog_0.gml,False,False,False,False,False,3.150000000000002,897,261.0
+datasets/GenCAT/AttributedGraphDataset:BlogCatalog_n_0_m_0/gmls/AttributedGraphDataset:BlogCatalog_1.gml,False,False,True,True,False,3.1000000000000014,771,152.0
+datasets/GenCAT/AttributedGraphDataset:BlogCatalog_n_0_m_0/gmls/AttributedGraphDataset:BlogCatalog_2.gml,False,False,False,False,False,2.5600000000000014,910,399.0
+datasets/GenCAT/AttributedGraphDataset:BlogCatalog_n_0_m_0/gmls/AttributedGraphDataset:BlogCatalog_3.gml,False,False,False,False,False,2.410000000000001,845,427.0
+datasets/GenCAT/AttributedGraphDataset:BlogCatalog_n_0_m_0/gmls/AttributedGraphDataset:BlogCatalog_4.gml,False,False,True,True,False,3.690000000000002,898,184.0
+datasets/GenCAT/AttributedGraphDataset:BlogCatalog_n_0_m_0/gmls/AttributedGraphDataset:BlogCatalog_5.gml,False,False,False,False,False,2.7700000000000014,850,328.0
+datasets/GenCAT/AttributedGraphDataset:BlogCatalog_n_0_m_0/gmls/AttributedGraphDataset:BlogCatalog_complete.gml,False,False,False,False,False,1.4500000000000004,5196,5195.0

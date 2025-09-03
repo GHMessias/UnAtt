@@ -1,0 +1,1 @@
+Log-normal didn't converge for datasets/UnAtt/Planetoid:Cora_n_0_m_0/degseqs/Planetoid:Cora_complete.gmldistribution.txt 

@@ -9,8 +9,8 @@ import numpy as np
 import pandas as pd
 
 
-from graphgen_models.SkyMap.skymap.metrics import SkyMapMetrics
-from graphgen_models.SkyMap.skymap.utils import (
+from graphgen_models.SkyMap.metrics import SkyMapMetrics
+from graphgen_models.SkyMap.utils import (
     distance,
     gen_beta_moments,
     imbalance_distribution,

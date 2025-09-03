@@ -17,7 +17,7 @@ from networkx.algorithms.approximation.clustering_coefficient import (
 from networkx.algorithms.cluster import average_clustering
 from scipy.sparse.linalg import eigsh
 
-from graphgen_models.SkyMap.skymap.utils import (
+from graphgen_models.SkyMap.utils import (
     fit_degree_distribution,
     get_mixing_matrix,
     imb_distr_fit,

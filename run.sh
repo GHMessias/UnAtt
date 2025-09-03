@@ -1,0 +1,1 @@
+python3 sfanalysis_runner.py --yaml_config_file config_files/sfanalysis.yaml

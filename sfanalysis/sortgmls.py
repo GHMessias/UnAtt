@@ -106,27 +106,28 @@ def bipartite(g, fp=None):
                         'error' means the gml file is not structured correctly
 
     """
-    if g.is_bipartite():
-        if 'type' in g.vs.attributes():
-            if len(set(g.vs['type'])) > 1:
-                df_entry = 1
-            else:
-                df_entry = 0
-        else:
-            if fp:
-                errormessage = "%s is bipartite and has no attribute 'type'\n" %fp
-                known = False
-                f = open(errorfp, 'a+')
-                f.seek(0)
-                for line in f:
-                    if line == errormessage:
-                        known = True
-                if not known:
-                    f.write(errormessage)
-                f.close()
-                df_entry = 'error'
-            else:
-                df_entry = 0
-    else:
-        df_entry = 0
-    return df_entry
+    # if g.is_bipartite():
+    #     if 'type' in g.vs.attributes():
+    #         if len(set(g.vs['type'])) > 1:
+    #             df_entry = 1
+    #         else:
+    #             df_entry = 0
+    #     else:
+    #         if fp:
+    #             errormessage = "%s is bipartite and has no attribute 'type'\n" %fp
+    #             known = False
+    #             f = open(errorfp, 'a+')
+    #             f.seek(0)
+    #             for line in f:
+    #                 if line == errormessage:
+    #                     known = True
+    #             if not known:
+    #                 f.write(errormessage)
+    #             f.close()
+    #             df_entry = 'error'
+    #         else:
+    #             df_entry = 0
+    # else:
+    #     df_entry = 0
+    # return df_entry
+    return 0

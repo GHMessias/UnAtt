@@ -1,6 +1,6 @@
 import numpy as np
 import scipy.optimize as op
-from sfanalysis_runner import integration_constants as ic
+from sfanalysis import integration_constants as ic
 import scipy.special as sp
 import time
 

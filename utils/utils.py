@@ -19,8 +19,8 @@ from scipy.sparse import csr_matrix
 import numpy as np
 from torch_geometric.utils import from_scipy_sparse_matrix
 from torch_geometric.data import Data
-from graphgen_models.UnAtt import unatt
-from graphgen_models.UnAtt import utils as unnat_utils
+from graphgen_models.UnAtt.model import unatt
+from graphgen_models.UnAtt import func as unnat_utils
 import os
 
 
@@ -127,10 +127,10 @@ def get_data(config):
     if not os.path.exists(datasets_path):
         os.makedirs(datasets_path)
     
-    dataset_class = config['sfanalysis']['dataset_name'].split("_")[0]
+    dataset_class = config['sfanalysis']['dataset_name'].split(":")[0]
 
     try:
-        dataset_name = config['sfanalysis']['dataset_name'].split("_")[1]
+        dataset_name = config['sfanalysis']['dataset_name'].split(":")[1]
     except:
         dataset_name = None
     
@@ -232,7 +232,7 @@ def get_data(config):
                 intra_cluster_edges = 0
 
             aug_data = unatt(data_to_mimic = data, number_of_nodes = n)
-            aug_data.edge_generation(num_edges = m, intra_cluster_edges = intra_cluster_edges)
+            aug_data.edge_generation(num_edges = m, interclass_edges = intra_cluster_edges)
             aug_data.edge_index = aug_data.whole_graph_edge_index
 
             return aug_data

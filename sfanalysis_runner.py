@@ -37,7 +37,7 @@ for label, ei in edges_per_class.items():
     if config['sfanalysis']['mimic_data']:
             gml_dir = f'datasets/{config["sfanalysis"]["synthetic_gen"]}/{dataset_name}_n_{config["sfanalysis"]["n"]}_m_{config["sfanalysis"]["m"]}/gmls/'
     else:
-            gml_dir = f'datasets/{dataset_name.split(":")[1]}/gmls'
+            gml_dir = f'datasets/{dataset_name.split(":")[1]}/gmls/'
 
     if not os.path.exists(gml_dir):
             os.makedirs(gml_dir)
@@ -56,7 +56,7 @@ if config['sfanalysis']['mimic_data']:
         deg_dir = f'datasets/{config["sfanalysis"]["synthetic_gen"]}/{dataset_name}_n_{config["sfanalysis"]["n"]}_m_{config["sfanalysis"]["m"]}/degseqs/'
 
 else: 
-    deg_dir = f'datasets/{dataset_name.split("_")[1]}/degseqs/'
+    deg_dir = f'datasets/{dataset_name.split(":")[1]}/degseqs/'
 
 if not os.path.exists(deg_dir):
     os.makedirs(deg_dir)
@@ -71,9 +71,13 @@ if config['sfanalysis']['mimic_data']:
     main_path = f'outputs/{config["sfanalysis"]["synthetic_gen"]}/{dataset_name}/'
 
 else:
-    main_path = f'outputs/{dataset_name}'
+    main_path = f'outputs/{dataset_name}/'
 
 if not os.path.exists(main_path):
     os.makedirs(main_path)
 
-hyps_df.to_csv(main_path + f'network_category_n_{config["sfanalysis"]["n"]}_m_{config["sfanalysis"]["m"]}.csv')
+if config['sfanalysis']['mimic_data']:
+    hyps_df.to_csv(main_path + f'network_category_n_{config["sfanalysis"]["n"]}_m_{config["sfanalysis"]["m"]}.csv')
+
+else:
+     hyps_df.to_csv(main_path + f'network_category.csv')
