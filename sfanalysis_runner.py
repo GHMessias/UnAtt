@@ -64,3 +64,16 @@ if not os.path.exists(deg_dir):
 deg_df = sf.write_degree_sequences(gml_dir, deg_dir)
 analysis_df = sf.analyze_degree_sequences(deg_dir, deg_df)
 hyps_df = sf.categorize_networks(analysis_df)
+
+# save dataframes
+
+if config['sfanalysis']['mimic_data']:
+    main_path = f'outputs/{config["sfanalysis"]["synthetic_gen"]}/{dataset_name}/'
+
+else:
+    main_path = f'outputs/{dataset_name}'
+
+if not os.path.exists(main_path):
+    os.makedirs(main_path)
+
+hyps_df.to_csv(main_path + f'network_category_n_{config["sfanalysis"]["n"]}_m_{config["sfanalysis"]["m"]}.csv')
