@@ -163,18 +163,26 @@ class unatt:
             # PDF por classe: graus do subgrafo da classe em representação undirected simétrica
             self.pdf_distributions = {}
             edge_index_by_label = split_edge_index_by_label(self.data_to_mimic.edge_index, self.data_to_mimic.y)
+
+            # Fazer uma função de split_nodes_by_label
+
+            ####################################################################################################
+            # TODO: solve the problem of indexing
             for c in range(self.k):
                 ei_c = remap_edge_index(edge_index_by_label[c])          # reindexa 0..|V_c|-1
                 ei_c = simple_undirected(ei_c)                           # duplica (u,v)/(v,u), sem loops/dups
-                num_nodes_c = int(ei_c.max().item()) + 1 if ei_c.numel() > 0 else int((self.data_to_mimic.y == c).sum().item())
+                # num_nodes_c = int(ei_c.max().item()) + 1 if ei_c.numel() > 0 else int((self.data_to_mimic.y == c).sum().item())
+                num_nodes_c = self.number_of_nodes[c]
 
-                deg_c = degree(ei_c[0], num_nodes=num_nodes_c)           # graus (não-dir) pois ei_c é simétrico
+                # Adding one to avoid 0 degree nodes
+                deg_c = degree(ei_c[0], num_nodes=num_nodes_c) + 1         # graus (não-dir) pois ei_c é simétrico
                 s = deg_c.sum()
                 if s > 0:
                     self.pdf_distributions[c] = deg_c / s
                 else:
-                    # Se não há arestas, usa uniforme na classe
-                    self.pdf_distributions[c] = torch.full((num_nodes_c,), 1.0 / max(1, num_nodes_c))
+                    raise NameError('Graph with no edges')
+
+            ####################################################################################################
 
             # Estruturas
             self.edge_index = {c: torch.empty((2, 0), dtype=torch.long) for c in range(self.k)}  # intra
@@ -339,6 +347,9 @@ class unatt:
 
         # ---------- Intra ----------
         for c in range(self.k):
+            # print('c',c)
+            # print('num_edges', num_edges)
+            # print('num_edges[c]', num_edges[c])
             target = int(num_edges[c]) if isinstance(num_edges, (list, tuple, torch.Tensor)) else int(num_edges)
             print(f'{target} edges to be added to cluster {c}')
             for i in range(target):

@@ -22,7 +22,7 @@ from torch_geometric.data import Data
 from graphgen_models.UnAtt.model import unatt
 from graphgen_models.UnAtt import func as unnat_utils
 import os
-
+from typing import Dict, List, Union
 
 def parse_arguments():
     '''
@@ -189,7 +189,7 @@ def get_data(config):
 
             S,X,Label = gencat.gencat_reproduction(S_ori, C, H, d, n=n,m=m,max_deg=int(maxdeg*2))
 
-            print(type(S), type(X))
+            # print(type(S), type(X))
 
             edge_index, _ = dok_to_edge_index_pyg(S, undirected = True)
 
@@ -218,11 +218,28 @@ def get_data(config):
             return aug_data
         
         if config['sfanalysis']['synthetic_gen'] == 'UnAtt':
+            # n is something like [100, 200, 300]
             n = config['sfanalysis']['n'] * torch.unique(data.y, return_counts = True)[1]
-            m = list(unnat_utils.split_edge_index_by_label(data.edge_index, data.y).values())
-            print(n,m)
-            m = config['sfanalysis']['m'] * m
-            intra_cluster_edges = sum(list(unnat_utils.count_heterogeneity(data.edge_index, data.y).values())) * config['sfanalysis']['intra_cluster_edges']
+
+
+            # by_label is something like {0: ei0, 1: ei1}
+            by_label = unnat_utils.split_edge_index_by_label(data.edge_index, data.y)
+
+            number_of_edges = list()
+
+            for index,ei in by_label.items():
+                number_of_edges.append(undirected_edge_count(ei))
+
+            # number_of_edges is something like [300, 400, 600]
+            number_of_edges = torch.tensor(number_of_edges)
+            print('number of edges originais', number_of_edges)
+            print('valor de m', config['sfanalysis']['m'])
+
+            m = config['sfanalysis']['m'] * number_of_edges
+
+            print('quantidade final de arestas', m)
+            # intra_cluster_edges = (sum(list(unnat_utils.count_heterogeneity(data.edge_index, data.y).values())) / 2) * config['sfanalysis']['intra_cluster_edges']
+            intra_cluster_edges = sum(count_hetero_edges(data.edge_index, data.y).values()) / 2
 
             if config['sfanalysis']['n'] == 0:
                 n = 0
@@ -231,6 +248,7 @@ def get_data(config):
             if  config['sfanalysis']['intra_cluster_edges'] == 0:
                 intra_cluster_edges = 0
 
+            print('num_edges', m)
             aug_data = unatt(data_to_mimic = data, number_of_nodes = n)
             aug_data.edge_generation(num_edges = m, interclass_edges = intra_cluster_edges)
             aug_data.edge_index = aug_data.whole_graph_edge_index
@@ -439,7 +457,8 @@ def dok_to_edge_index_pyg(A_dok, undirected=False, remove_self_loops=True, devic
         edge_weight = edge_weight.to(device)
     return edge_index, edge_weight
 
-def edge_index_to_gml(edge_index, path, directed=False):
+#TODO: use G.add_nodes_from para a lista de nodes por classe.
+def edge_index_to_gml(edge_index, path, nodes = None, directed=False):
     # edge_index: Tensor shape [2, E]
     ei = edge_index.detach().cpu().numpy()
     G = nx.Graph() if not directed else nx.DiGraph()
@@ -447,6 +466,9 @@ def edge_index_to_gml(edge_index, path, directed=False):
     # garante não-direcionado sem duplicatas
     if directed is False:
         G = nx.Graph(G)
+
+    if nodes is not None:
+        G.add_nodes_from(nodes)
     # nx.write_gml(G, path)
     nx.write_gml(G, path, stringizer=str)
     return path
@@ -487,3 +509,43 @@ def split_edge_index_by_label(edge_index: torch.Tensor, y: torch.Tensor):
         result[int(lbl.item())] = edges_lbl
 
     return result
+
+def nodes_by_group(
+    y: Union[torch.Tensor, np.ndarray, List[int], List[float]],
+    return_tensors: bool = False,
+    sort_labels: bool = True,
+    sort_indices: bool = True,
+) -> Dict[Union[int, float], Union[List[int], torch.Tensor]]:
+    """
+    Agrupa vértices por rótulo (classe).
+
+    Parâmetros
+    ----------
+    y : Union[torch.Tensor, np.ndarray, List[int], List[float]]
+        Vetor 1D de rótulos por nó (tamanho N).
+    return_tensors : bool
+        Se True, retorna os índices como torch.Tensor; caso contrário, como list[int].
+    sort_labels : bool
+        Se True, as chaves (rótulos) do dicionário seguem ordem crescente.
+    sort_indices : bool
+        Se True, os índices de cada grupo são ordenados.
+
+    Retorno
+    -------
+    Dict[label, indices]
+        Dicionário onde a chave é o rótulo e o valor é a lista/tensor de índices dos nós.
+    """
+    y_t = torch.as_tensor(y).detach().cpu().view(-1)  # garante 1D no CPU
+    labels = torch.unique(y_t, sorted=sort_labels)
+    idx = torch.arange(y_t.numel())
+
+    out: Dict[Union[int, float], Union[List[int], torch.Tensor]] = {}
+    for lab in labels:
+        mask = (y_t == lab)
+        indices = idx[mask]
+        if sort_indices:
+            indices, _ = torch.sort(indices)
+        value = indices if return_tensors else indices.tolist()
+        key = lab.item()  # python int/float conforme dtype
+        out[key] = value
+    return out

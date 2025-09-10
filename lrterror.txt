@@ -1,1 +1,40 @@
 Log-normal didn't converge for datasets/UnAtt/Planetoid:Cora_n_0_m_0/degseqs/Planetoid:Cora_complete.gmldistribution.txt 
+Exponential didn't converge for datasets/UnAtt/AttributedGraphDataset:BlogCatalog_n_2_m_2/degseqs/AttributedGraphDataset:BlogCatalog_complete.gmldistribution.txt 
+Exponential didn't converge for datasets/GenCAT/Planetoid:Cora_n_2_m_2/degseqs/Planetoid:Cora_5.gmldistribution.txt 
+Log-normal didn't converge for datasets/GenCAT/Planetoid:Cora_n_2_m_2/degseqs/Planetoid:Cora_5.gmldistribution.txt 
+Exponential didn't converge for datasets/UnAtt/Planetoid:Cora_n_3_m_3/degseqs/Planetoid:Cora_4.gmldistribution.txt 
+Exponential didn't converge for datasets/UnAtt/Planetoid:Cora_n_3_m_3/degseqs/Planetoid:Cora_0.gmldistribution.txt 
+Exponential didn't converge for datasets/GenCAT/Planetoid:Cora_n_3_m_3/degseqs/Planetoid:Cora_3.gmldistribution.txt 
+Log-normal didn't converge for datasets/GenCAT/Planetoid:Cora_n_3_m_3/degseqs/Planetoid:Cora_1.gmldistribution.txt 
+Exponential didn't converge for datasets/SkyMap/Planetoid:Cora_n_3_m_3/degseqs/Planetoid:Cora_1.gmldistribution.txt 
+Exponential didn't converge for datasets/GenCAT/Planetoid:Cora_n_0_m_0/degseqs/Planetoid:Cora_complete.gmldistribution.txt 
+Exponential didn't converge for datasets/GenCAT/Amazon:Photo_n_0_m_0/degseqs/Amazon:Photo_4.gmldistribution.txt 
+Exponential didn't converge for datasets/GenCAT/Amazon:Photo_n_2_m_2/degseqs/Amazon:Photo_1.gmldistribution.txt 
+Exponential didn't converge for datasets/GenCAT/Amazon:Photo_n_2_m_2/degseqs/Amazon:Photo_0.gmldistribution.txt 
+Exponential didn't converge for datasets/GenCAT/Amazon:Photo_n_2_m_2/degseqs/Amazon:Photo_complete.gmldistribution.txt 
+Log-normal didn't converge for datasets/GenCAT/Amazon:Photo_n_2_m_2/degseqs/Amazon:Photo_4.gmldistribution.txt 
+Exponential didn't converge for datasets/UnAtt/Planetoid:Cora_n_0_m_0/degseqs/Planetoid:Cora_1.gmldistribution.txt 
+Stretched exponential didn't converge for datasets/UnAtt/Planetoid:Cora_n_2_m_2/degseqs/Planetoid:Cora_1.gmldistribution.txt 
+Log-normal didn't converge for datasets/GenCAT/Planetoid:Cora_n_0_m_0/degseqs/Planetoid:Cora_complete.gmldistribution.txt 
+Exponential didn't converge for datasets/GenCAT/Planetoid:Cora_n_3_m_3/degseqs/Planetoid:Cora_4.gmldistribution.txt 
+Exponential didn't converge for datasets/GenCAT/Planetoid:Cora_n_5_m_5/degseqs/Planetoid:Cora_5.gmldistribution.txt 
+Stretched exponential didn't converge for datasets/UnAtt/Planetoid:Cora_n_0_m_0/degseqs/Planetoid:Cora_3.gmldistribution.txt 
+Exponential didn't converge for datasets/UnAtt/Planetoid:Cora_n_2_m_2/degseqs/Planetoid:Cora_0.gmldistribution.txt 
+Exponential didn't converge for datasets/UnAtt/Planetoid:Cora_n_3_m_3/degseqs/Planetoid:Cora_2.gmldistribution.txt 
+Exponential didn't converge for datasets/UnAtt/Planetoid:Cora_n_3_m_3/degseqs/Planetoid:Cora_1.gmldistribution.txt 
+Exponential didn't converge for datasets/UnAtt/Planetoid:Cora_n_5_m_5/degseqs/Planetoid:Cora_3.gmldistribution.txt 
+Exponential didn't converge for datasets/UnAtt/Planetoid:Cora_n_5_m_5/degseqs/Planetoid:Cora_6.gmldistribution.txt 
+Exponential didn't converge for datasets/UnAtt/Planetoid:Cora_n_10_m_10/degseqs/Planetoid:Cora_1.gmldistribution.txt 
+Stretched exponential didn't converge for datasets/GenCAT/Planetoid:Cora_n_0_m_0/degseqs/Planetoid:Cora_0.gmldistribution.txt 
+Exponential didn't converge for datasets/GenCAT/Planetoid:Cora_n_5_m_5/degseqs/Planetoid:Cora_0.gmldistribution.txt 
+Exponential didn't converge for datasets/GenCAT/Planetoid:Cora_n_5_m_5/degseqs/Planetoid:Cora_1.gmldistribution.txt 
+Exponential didn't converge for datasets/GenCAT/Planetoid:Cora_n_10_m_10/degseqs/Planetoid:Cora_3.gmldistribution.txt 
+Exponential didn't converge for datasets/GenCAT/Planetoid:Cora_n_10_m_10/degseqs/Planetoid:Cora_complete.gmldistribution.txt 
+Exponential didn't converge for datasets/GenCAT/Planetoid:Cora_n_10_m_10/degseqs/Planetoid:Cora_5.gmldistribution.txt 
+Exponential didn't converge for datasets/UnAtt/Planetoid:Cora_n_2_m_2/degseqs/Planetoid:Cora_1.gmldistribution.txt 
+Exponential didn't converge for datasets/UnAtt/Planetoid:Cora_n_2_m_3/degseqs/Planetoid:Cora_2.gmldistribution.txt 
+Log-normal didn't converge for datasets/UnAtt/Planetoid:Cora_n_2_m_3/degseqs/Planetoid:Cora_3.gmldistribution.txt 
+Exponential didn't converge for datasets/UnAtt/Planetoid:Cora_n_2_m_3/degseqs/Planetoid:Cora_3.gmldistribution.txt 
+Stretched exponential didn't converge for datasets/UnAtt/Planetoid:Cora_n_0_m_0/degseqs/Planetoid:Cora_2.gmldistribution.txt 
+Exponential didn't converge for datasets/UnAtt/Planetoid:Cora_n_0_m_0/degseqs/Planetoid:Cora_3.gmldistribution.txt 
+Stretched exponential didn't converge for datasets/UnAtt/Planetoid:Cora_n_0_m_0/degseqs/Planetoid:Cora_complete.gmldistribution.txt 

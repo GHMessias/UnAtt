@@ -2,3 +2,13 @@ datasets/BlogCatalog/gmls/AttributedGraphDataset:BlogCatalog_2.gmldistribution.t
 datasets/BlogCatalog/gmls/AttributedGraphDataset:BlogCatalog_4.gmldistribution.txt is too dense 
 datasets/UnAtt/AttributedGraphDataset:BlogCatalog_n_0_m_0/gmls/AttributedGraphDataset:BlogCatalog_2.gmldistribution.txt is too dense 
 datasets/UnAtt/AttributedGraphDataset:BlogCatalog_n_0_m_0/gmls/AttributedGraphDataset:BlogCatalog_4.gmldistribution.txt is too dense 
+datasets/UnAtt/AttributedGraphDataset:BlogCatalog_n_2_m_2/gmls/AttributedGraphDataset:BlogCatalog_3.gmldistribution.txt is too dense 
+datasets/UnAtt/AttributedGraphDataset:BlogCatalog_n_2_m_2/gmls/AttributedGraphDataset:BlogCatalog_0.gmldistribution.txt is too dense 
+datasets/UnAtt/AttributedGraphDataset:BlogCatalog_n_2_m_2/gmls/AttributedGraphDataset:BlogCatalog_2.gmldistribution.txt is too dense 
+datasets/UnAtt/AttributedGraphDataset:BlogCatalog_n_2_m_2/gmls/AttributedGraphDataset:BlogCatalog_4.gmldistribution.txt is too dense 
+datasets/UnAtt/AttributedGraphDataset:BlogCatalog_n_2_m_2/gmls/AttributedGraphDataset:BlogCatalog_1.gmldistribution.txt is too dense 
+datasets/UnAtt/AttributedGraphDataset:BlogCatalog_n_2_m_2/gmls/AttributedGraphDataset:BlogCatalog_5.gmldistribution.txt is too dense 
+datasets/GenCAT/Amazon:Photo_n_0_m_0/gmls/Amazon:Photo_0.gmldistribution.txt is too dense 
+datasets/GenCAT/Amazon:Photo_n_0_m_0/gmls/Amazon:Photo_5.gmldistribution.txt is too dense 
+datasets/UnAtt/Planetoid:Cora_n_5_m_5/gmls/Planetoid:Cora_6.gmldistribution.txt is too dense 
+datasets/UnAtt/Planetoid:Cora_n_5_m_5/gmls/Planetoid:Cora_1.gmldistribution.txt is too dense 
