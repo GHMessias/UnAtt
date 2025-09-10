@@ -11,6 +11,10 @@ from utils.utils import (
     count_hetero_edges,
     nodes_by_group)
 
+from datetime import datetime
+
+now = datetime.now()
+
 args = parse_arguments()
 config = load_config(args.yaml_config_file)
 
@@ -41,9 +45,9 @@ for label, ei in edges_per_class.items():
     print(ei)
     
     if config['sfanalysis']['mimic_data']:
-            gml_dir = f'datasets/{config["sfanalysis"]["synthetic_gen"]}/{dataset_name}_n_{config["sfanalysis"]["n"]}_m_{config["sfanalysis"]["m"]}/gmls/'
+            gml_dir = f'datasets/{config["sfanalysis"]["synthetic_gen"]}/{dataset_name}_n_{config["sfanalysis"]["n"]}_m_{config["sfanalysis"]["m"]}/{now}/gmls/'
     else:
-            gml_dir = f'datasets/{dataset_name.split(":")[1]}/gmls/'
+            gml_dir = f'datasets/{dataset_name.split(":")[1]}/{now}/gmls/'
 
     if not os.path.exists(gml_dir):
             os.makedirs(gml_dir)
@@ -53,16 +57,16 @@ for label, ei in edges_per_class.items():
 # gml file for the complete data
 
 if config['sfanalysis']['mimic_data']:
-    edge_index_to_gml(data.edge_index, path = f'datasets/{config["sfanalysis"]["synthetic_gen"]}/{dataset_name}_n_{config["sfanalysis"]["n"]}_m_{config["sfanalysis"]["m"]}/gmls/' + f'{dataset_name}_complete.gml')
+    edge_index_to_gml(data.edge_index, path = f'datasets/{config["sfanalysis"]["synthetic_gen"]}/{dataset_name}_n_{config["sfanalysis"]["n"]}_m_{config["sfanalysis"]["m"]}/{now}/gmls/' + f'{dataset_name}_complete.gml')
 
 else:
-    edge_index_to_gml(data.edge_index, path = f'datasets/{dataset_name.split(":")[1]}/gmls/complete_{dataset_name}_complete.gml')
+    edge_index_to_gml(data.edge_index, path = f'datasets/{dataset_name.split(":")[1]}/{now}/gmls/complete_{dataset_name}_complete.gml')
 
 if config['sfanalysis']['mimic_data']:
-        deg_dir = f'datasets/{config["sfanalysis"]["synthetic_gen"]}/{dataset_name}_n_{config["sfanalysis"]["n"]}_m_{config["sfanalysis"]["m"]}/degseqs/'
+        deg_dir = f'datasets/{config["sfanalysis"]["synthetic_gen"]}/{dataset_name}_n_{config["sfanalysis"]["n"]}_m_{config["sfanalysis"]["m"]}/{now}/degseqs/'
 
 else: 
-    deg_dir = f'datasets/{dataset_name.split(":")[1]}/degseqs/'
+    deg_dir = f'datasets/{dataset_name.split(":")[1]}/{now}/degseqs/'
 
 if not os.path.exists(deg_dir):
     os.makedirs(deg_dir)
@@ -81,11 +85,6 @@ else:
 
 if not os.path.exists(main_path):
     os.makedirs(main_path)
-
-
-from datetime import datetime
-
-now = datetime.now()
 
 if config['sfanalysis']['mimic_data']:
     hyps_df.to_csv(main_path + f'network_category_n_{config["sfanalysis"]["n"]}_m_{config["sfanalysis"]["m"]}_{now}.csv')

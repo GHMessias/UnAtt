@@ -2,6 +2,6 @@ sfanalysis:
   dataset_name: "Planetoid:Cora"
   mimic_data: true
   synthetic_gen: "UnAtt"
-  n: 0
-  m: 0
-  intra_cluster_edges: 0
+  n: 5
+  m: 5
+  intra_cluster_edges: 5

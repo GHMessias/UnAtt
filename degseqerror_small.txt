@@ -29,3 +29,9 @@ datasets/GenCAT/Planetoid:Cora_n_3_m_3/gmls/Planetoid:Cora_0.gmldistribution.txt
 datasets/GenCAT/Planetoid:Cora_n_3_m_3/gmls/Planetoid:Cora_5.gmldistribution.txt mean degree is too small 
 datasets/GenCAT/Planetoid:Cora_n_3_m_3/gmls/Planetoid:Cora_6.gmldistribution.txt mean degree is too small 
 datasets/GenCAT/Planetoid:Cora_n_3_m_3/gmls/Planetoid:Cora_1.gmldistribution.txt mean degree is too small 
+datasets/GenCAT/Planetoid:Cora_n_5_m_5/2025-09-10 12:01:13.462285/gmls/Planetoid:Cora_5.gmldistribution.txt mean degree is too small 
+datasets/GenCAT/Planetoid:Cora_n_5_m_5/2025-09-10 12:01:13.462285/gmls/Planetoid:Cora_4.gmldistribution.txt mean degree is too small 
+datasets/GenCAT/Planetoid:Cora_n_5_m_5/2025-09-10 12:01:13.462285/gmls/Planetoid:Cora_6.gmldistribution.txt mean degree is too small 
+datasets/GenCAT/Planetoid:Cora_n_5_m_5/2025-09-10 12:01:13.462285/gmls/Planetoid:Cora_2.gmldistribution.txt mean degree is too small 
+datasets/GenCAT/Planetoid:Cora_n_5_m_5/2025-09-10 12:01:13.462285/gmls/Planetoid:Cora_1.gmldistribution.txt mean degree is too small 
+datasets/GenCAT/Planetoid:Cora_n_5_m_5/2025-09-10 12:01:13.462285/gmls/Planetoid:Cora_0.gmldistribution.txt mean degree is too small 

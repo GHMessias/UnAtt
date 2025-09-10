@@ -7,8 +7,8 @@ CFG="config_files/sfanalysis.yaml"   # coloque aqui o caminho do YAML que o runn
 # DATASETS=("Planetoid:Cora" "Amazon:Photo" "AttributedGraphDataset:BlogCatalog" "Planetoid:CiteSeer")
 # GENERATORS=("GenCAT" "SkyMap" "UnAtt")
 DATASETS=("Planetoid:Cora")
-GENERATORS=("UnAtt")
-VALUES=(0)  # n e m
+GENERATORS=("GenCAT" "UnAtt")
+VALUES=(2 3 5)  # n e m
 
 for dataset in "${DATASETS[@]}"; do
   for gen in "${GENERATORS[@]}"; do

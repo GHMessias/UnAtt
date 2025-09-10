@@ -1,0 +1,9 @@
+,Strongest,Strong,Weak,Weakest,Super_Weak,median_alpha,n,median_ntail
+datasets/UnAtt/Planetoid:Cora_n_0_m_0/2025-09-10 09:20:54.805135/gmls/Planetoid:Cora_0.gml,False,False,False,True,True,3.4600000000000017,351,40.0
+datasets/UnAtt/Planetoid:Cora_n_0_m_0/2025-09-10 09:20:54.805135/gmls/Planetoid:Cora_1.gml,False,False,True,True,False,3.2200000000000015,217,60.0
+datasets/UnAtt/Planetoid:Cora_n_0_m_0/2025-09-10 09:20:54.805135/gmls/Planetoid:Cora_2.gml,False,False,True,True,False,3.7500000000000027,418,86.0
+datasets/UnAtt/Planetoid:Cora_n_0_m_0/2025-09-10 09:20:54.805135/gmls/Planetoid:Cora_3.gml,False,False,True,True,False,3.8100000000000023,818,153.0
+datasets/UnAtt/Planetoid:Cora_n_0_m_0/2025-09-10 09:20:54.805135/gmls/Planetoid:Cora_4.gml,False,False,False,False,False,3.360000000000002,426,151.0
+datasets/UnAtt/Planetoid:Cora_n_0_m_0/2025-09-10 09:20:54.805135/gmls/Planetoid:Cora_5.gml,False,False,True,True,False,3.4200000000000017,298,88.0
+datasets/UnAtt/Planetoid:Cora_n_0_m_0/2025-09-10 09:20:54.805135/gmls/Planetoid:Cora_6.gml,False,False,False,False,False,7.730000000000006,180,18.0
+datasets/UnAtt/Planetoid:Cora_n_0_m_0/2025-09-10 09:20:54.805135/gmls/Planetoid:Cora_complete.gml,False,False,False,False,False,3.650000000000002,2511,580.0
