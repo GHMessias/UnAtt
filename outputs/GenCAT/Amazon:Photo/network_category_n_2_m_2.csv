@@ -1,0 +1,10 @@
+,Strongest,Strong,Weak,Weakest,Super_Weak,median_alpha,n,median_ntail
+datasets/GenCAT/Amazon:Photo_n_2_m_2/gmls/Amazon:Photo_0.gml,False,False,False,False,True,1.9400000000000008,763,517.0
+datasets/GenCAT/Amazon:Photo_n_2_m_2/gmls/Amazon:Photo_1.gml,False,False,False,False,False,1.7600000000000007,3006,732.0
+datasets/GenCAT/Amazon:Photo_n_2_m_2/gmls/Amazon:Photo_2.gml,False,False,False,False,False,1.7900000000000007,1388,1019.0
+datasets/GenCAT/Amazon:Photo_n_2_m_2/gmls/Amazon:Photo_3.gml,False,False,False,False,False,1.8400000000000007,1704,432.0
+datasets/GenCAT/Amazon:Photo_n_2_m_2/gmls/Amazon:Photo_4.gml,False,False,False,False,False,1.6900000000000006,1717,1717.0
+datasets/GenCAT/Amazon:Photo_n_2_m_2/gmls/Amazon:Photo_5.gml,False,False,False,False,False,1.7800000000000007,1502,660.0
+datasets/GenCAT/Amazon:Photo_n_2_m_2/gmls/Amazon:Photo_6.gml,False,False,False,False,False,1.6600000000000006,3642,2821.0
+datasets/GenCAT/Amazon:Photo_n_2_m_2/gmls/Amazon:Photo_7.gml,False,False,True,True,False,1.8400000000000007,458,267.0
+datasets/GenCAT/Amazon:Photo_n_2_m_2/gmls/Amazon:Photo_complete.gml,False,False,False,False,False,1.5500000000000005,15300,12469.0

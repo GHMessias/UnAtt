@@ -3,4 +3,4 @@ datasets/BlogCatalog/gmls/AttributedGraphDataset:BlogCatalog_0.gml,False,False,T
 datasets/BlogCatalog/gmls/AttributedGraphDataset:BlogCatalog_1.gml,False,False,False,False,False,3.0000000000000018,741,205.0
 datasets/BlogCatalog/gmls/AttributedGraphDataset:BlogCatalog_3.gml,False,False,True,True,False,4.100000000000002,819,124.0
 datasets/BlogCatalog/gmls/AttributedGraphDataset:BlogCatalog_5.gml,False,False,False,False,False,3.4200000000000017,841,164.0
-datasets/BlogCatalog/gmls/complete_AttributedGraphDataset:BlogCatalog_gml.gml,False,False,False,False,False,1.4500000000000004,5196,5195.0
+datasets/BlogCatalog/gmls/complete_AttributedGraphDataset:BlogCatalog_complete.gml,False,False,False,False,False,1.4500000000000004,5196,5195.0

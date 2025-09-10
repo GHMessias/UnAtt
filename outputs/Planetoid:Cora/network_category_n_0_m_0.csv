@@ -6,4 +6,4 @@ datasets/Cora/gmls/Planetoid:Cora_3.gml,False,False,False,False,False,3.34000000
 datasets/Cora/gmls/Planetoid:Cora_4.gml,False,False,True,True,False,3.6700000000000026,400,91.0
 datasets/Cora/gmls/Planetoid:Cora_5.gml,False,False,True,True,False,3.6000000000000023,279,86.0
 datasets/Cora/gmls/Planetoid:Cora_6.gml,False,False,False,False,False,3.030000000000002,170,80.0
-datasets/Cora/gmls/complete_Planetoid:Cora_gml.gml,False,False,False,False,False,3.360000000000002,2708,698.0
+datasets/Cora/gmls/complete_Planetoid:Cora_complete.gml,False,False,False,False,False,3.360000000000002,2708,698.0
