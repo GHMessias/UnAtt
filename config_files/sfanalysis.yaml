@@ -1,5 +1,5 @@
 sfanalysis:
-  dataset_name: "Planetoid:Cora"
+  dataset_name: "Planetoid:CiteSeer"
   mimic_data: true
   synthetic_gen: "UnAtt"
   n: 5

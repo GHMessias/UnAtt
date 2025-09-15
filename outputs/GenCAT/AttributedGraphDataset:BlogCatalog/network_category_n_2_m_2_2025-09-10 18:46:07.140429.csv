@@ -1,0 +1,5 @@
+,Strongest,Strong,Weak,Weakest,Super_Weak,median_alpha,n,median_ntail
+datasets/GenCAT/AttributedGraphDataset:BlogCatalog_n_2_m_2/2025-09-10 18:46:07.140429/gmls/AttributedGraphDataset:BlogCatalog_1.gml,False,False,False,False,False,1.5100000000000005,1635,785.0
+datasets/GenCAT/AttributedGraphDataset:BlogCatalog_n_2_m_2/2025-09-10 18:46:07.140429/gmls/AttributedGraphDataset:BlogCatalog_2.gml,False,False,False,False,False,1.5200000000000005,1847,1193.0
+datasets/GenCAT/AttributedGraphDataset:BlogCatalog_n_2_m_2/2025-09-10 18:46:07.140429/gmls/AttributedGraphDataset:BlogCatalog_4.gml,False,False,False,False,False,1.5100000000000005,1815,1424.0
+datasets/GenCAT/AttributedGraphDataset:BlogCatalog_n_2_m_2/2025-09-10 18:46:07.140429/gmls/AttributedGraphDataset:BlogCatalog_5.gml,False,False,False,False,False,1.9000000000000008,1667,378.0

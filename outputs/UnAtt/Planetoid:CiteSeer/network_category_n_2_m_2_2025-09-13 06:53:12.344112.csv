@@ -1,0 +1,4 @@
+,Strongest,Strong,Weak,Weakest,Super_Weak,median_alpha,n,median_ntail
+datasets/UnAtt/Planetoid:CiteSeer_n_2_m_2/2025-09-13 06:53:12.344112/gmls/Planetoid:CiteSeer_2.gml,False,False,False,True,False,3.7500000000000027,1336,41.0
+datasets/UnAtt/Planetoid:CiteSeer_n_2_m_2/2025-09-13 06:53:12.344112/gmls/Planetoid:CiteSeer_4.gml,False,False,True,True,False,3.3900000000000023,1192,161.0
+datasets/UnAtt/Planetoid:CiteSeer_n_2_m_2/2025-09-13 06:53:12.344112/gmls/Planetoid:CiteSeer_complete.gml,False,False,False,False,False,2.9600000000000017,5228,1337.0

@@ -1,0 +1,7 @@
+,Strongest,Strong,Weak,Weakest,Super_Weak,median_alpha,n,median_ntail
+datasets/GenCAT/Planetoid:CiteSeer_n_0_m_0/2025-09-13 06:21:02.063046/gmls/Planetoid:CiteSeer_1.gml,False,False,False,True,False,3.200000000000002,278,48.0
+datasets/GenCAT/Planetoid:CiteSeer_n_0_m_0/2025-09-13 06:21:02.063046/gmls/Planetoid:CiteSeer_2.gml,False,False,False,False,False,3.400000000000002,525,84.0
+datasets/GenCAT/Planetoid:CiteSeer_n_0_m_0/2025-09-13 06:21:02.063046/gmls/Planetoid:CiteSeer_3.gml,False,False,True,True,False,3.040000000000002,411,83.0
+datasets/GenCAT/Planetoid:CiteSeer_n_0_m_0/2025-09-13 06:21:02.063046/gmls/Planetoid:CiteSeer_4.gml,False,False,False,True,False,4.240000000000003,450,23.0
+datasets/GenCAT/Planetoid:CiteSeer_n_0_m_0/2025-09-13 06:21:02.063046/gmls/Planetoid:CiteSeer_5.gml,False,False,True,True,False,2.8000000000000016,330,115.0
+datasets/GenCAT/Planetoid:CiteSeer_n_0_m_0/2025-09-13 06:21:02.063046/gmls/Planetoid:CiteSeer_complete.gml,False,False,False,False,False,3.3800000000000017,2120,332.0

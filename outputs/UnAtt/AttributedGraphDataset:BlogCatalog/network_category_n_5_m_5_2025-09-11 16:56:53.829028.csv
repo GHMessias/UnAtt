@@ -1,0 +1,8 @@
+,Strongest,Strong,Weak,Weakest,Super_Weak,median_alpha,n,median_ntail
+datasets/UnAtt/AttributedGraphDataset:BlogCatalog_n_5_m_5/2025-09-11 16:56:53.829028/gmls/AttributedGraphDataset:BlogCatalog_0.gml,False,False,False,False,False,1.7500000000000007,4425,3850.0
+datasets/UnAtt/AttributedGraphDataset:BlogCatalog_n_5_m_5/2025-09-11 16:56:53.829028/gmls/AttributedGraphDataset:BlogCatalog_1.gml,False,False,False,False,False,1.9200000000000008,3885,3188.0
+datasets/UnAtt/AttributedGraphDataset:BlogCatalog_n_5_m_5/2025-09-11 16:56:53.829028/gmls/AttributedGraphDataset:BlogCatalog_2.gml,False,False,False,False,False,1.7000000000000006,4605,4228.0
+datasets/UnAtt/AttributedGraphDataset:BlogCatalog_n_5_m_5/2025-09-11 16:56:53.829028/gmls/AttributedGraphDataset:BlogCatalog_3.gml,False,False,False,False,False,1.8500000000000008,4290,3580.0
+datasets/UnAtt/AttributedGraphDataset:BlogCatalog_n_5_m_5/2025-09-11 16:56:53.829028/gmls/AttributedGraphDataset:BlogCatalog_4.gml,False,False,False,False,False,1.6800000000000006,4460,4040.0
+datasets/UnAtt/AttributedGraphDataset:BlogCatalog_n_5_m_5/2025-09-11 16:56:53.829028/gmls/AttributedGraphDataset:BlogCatalog_5.gml,False,False,False,False,False,1.8000000000000007,4315,3783.0
+datasets/UnAtt/AttributedGraphDataset:BlogCatalog_n_5_m_5/2025-09-11 16:56:53.829028/gmls/AttributedGraphDataset:BlogCatalog_complete.gml,False,False,False,False,False,1.6900000000000006,25943,24688.0
